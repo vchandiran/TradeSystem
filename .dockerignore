@@ -1,0 +1,31 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.coverage
+htmlcov
+
+# Node & Frontend
+dashboard/node_modules
+dashboard/.git
+
+# Virtual Environments
+venv
+.venv
+env
+
+# Logs and Local data
+logs/*.log
+*.sqlite
+*.db
+
+# Temporary
+.vscode
+.idea
+*.swp

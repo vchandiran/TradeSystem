@@ -1,0 +1,27 @@
+services:
+  nse-trading-desk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nse-trading-desk:latest
+    container_name: nse-trading-desk
+    restart: unless-stopped
+    ports:
+      - "8050:8050"
+    environment:
+      - TZ=Asia/Kolkata
+      - ALICE_USER_ID=${ALICE_USER_ID:-YOUR_USER_ID}
+      - ALICE_API_KEY=${ALICE_API_KEY:-YOUR_API_KEY}
+      - TRADING_MODE=${TRADING_MODE:-paper}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - PORT=8050
+    volumes:
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8050/api/status"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

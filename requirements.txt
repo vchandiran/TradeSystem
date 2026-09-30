@@ -1,0 +1,32 @@
+# AliceBlue Broker API
+pya3>=1.0.29
+
+# Data Analysis & Technical Indicators
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Configuration
+PyYAML>=6.0
+python-dotenv>=1.0.0
+
+# Logging & Console
+colorama>=0.4.6
+
+# Scheduling
+schedule>=1.2.0
+
+# HTTP, API Server & Networking
+requests>=2.31.0
+websocket-client>=1.6.0
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+yfinance>=0.2.38
+
+# Notifications (optional)
+python-telegram-bot>=20.0
+
+# Development & Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.0

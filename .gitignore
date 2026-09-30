@@ -1,0 +1,48 @@
+# Environment & Secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Data
+data/
+*.csv
+*.db
+*.sqlite
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Trading specific
+contract_masters/
+*.session
+
+# Frontend Node & Build
+node_modules/
+*/node_modules/
+dashboard/dist/
+.vite/
